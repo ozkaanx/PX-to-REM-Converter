@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
+.main {
+  width: 90%;
+  padding: 200px 20px 200px 20px;
+  margin: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  &-title {
+    font-size: 30px;
+    margin-bottom: 40px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+  }
+  &-input {
+    display: flex;
+    position: relative;
+    gap: 60px;
+    @media screen and (max-width: 900px) {
+      flex-direction: column;
+    }
+    > .input-group {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      max-width: 350px;
+      min-width: 200px;
+      .group-title {
+        font-size: 20px;
+        font-family: "Raleway", sans-serif;
+        font-weight: 300;
+        margin-bottom: 10px;
+      }
+      > .inputfirst,
+      .inputlast {
+        width: 100%;
+        height: 60px;
+        border: 1px solid rgba(207, 207, 207, 0.637);
+        font-size: 35px;
+        text-align: center;
+        font-family: "Lato", sans-serif;
+        color: rgb(83, 83, 83);
+        &:focus {
+          border: 1px solid rgb(84, 152, 240);
+        }
+      }
+      .inputfirst{
+        &.active{
+          color: red;
+        }
+      }
+      .inputlast{
+        &.active{
+          color: red;
+        }
+      }
+    }
+    .input-ico {
+      position: absolute;
+      right: 10px;
+      font-size: 17px;
+      color: grey;
+      bottom: 20px;
+      font-family: "Raleway", sans-serif;
+    }
+  }
+  &-bottom {
+    padding-top: 80px;
+    > label {
+      font-family: "Raleway", sans-serif;
+      font-size: 15px;
+      color: rgb(83, 83, 83);
+      > input {
+        width: 30px;
+        text-align: center;
+        font-weight: bold;
+        font-family: "Raleway", sans-serif;
+        font-size: 18px;
+        margin-left: 5px;
+        margin-right: 5px;
+        &:focus {
+          border: 1px solid black;
+        }
+      }
+    }
+  }
+}
